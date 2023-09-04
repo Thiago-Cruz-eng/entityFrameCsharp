@@ -38,7 +38,7 @@ namespace Alura.Filmes.App.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Actor");
+                    b.ToTable("actor");
                 });
 #pragma warning restore 612, 618
         }

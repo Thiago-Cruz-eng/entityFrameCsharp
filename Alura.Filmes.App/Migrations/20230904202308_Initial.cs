@@ -5,12 +5,12 @@ using System.Collections.Generic;
 
 namespace Alura.Filmes.App.Migrations
 {
-    public partial class Inicial : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Actor",
+                name: "actor",
                 columns: table => new
                 {
                     actor_id = table.Column<int>(type: "int", nullable: false)
@@ -20,14 +20,14 @@ namespace Alura.Filmes.App.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Actor", x => x.actor_id);
+                    table.PrimaryKey("PK_actor", x => x.actor_id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Actor");
+                name: "actor");
         }
     }
 }
