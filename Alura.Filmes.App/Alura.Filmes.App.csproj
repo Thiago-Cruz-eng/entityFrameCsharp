@@ -128,6 +128,7 @@
     <Compile Include="Dados\AtorConfig.cs" />
     <Compile Include="Dados\FilmeAtorConfig.cs" />
     <Compile Include="Dados\FilmConfig.cs" />
+    <Compile Include="Dados\IdiomasConfig.cs" />
     <Compile Include="Extensions\DbContextExtensions.cs" />
     <Compile Include="Migrations\20230904203437_Initial.cs" />
     <Compile Include="Migrations\20230904203437_Initial.designer.cs">
@@ -137,10 +138,15 @@
     <Compile Include="Migrations\20230905103717_Add_default_value_datetime_last_update.designer.cs">
       <DependentUpon>20230905103717_Add_default_value_datetime_last_update.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20230905180332_Idioma.cs" />
+    <Compile Include="Migrations\20230905180332_Idioma.designer.cs">
+      <DependentUpon>20230905180332_Idioma.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\AluraFilmesContextoModelSnapshot.cs" />
     <Compile Include="Negocio\Ator.cs" />
     <Compile Include="Negocio\Filme.cs" />
     <Compile Include="Negocio\FilmeAtor.cs" />
+    <Compile Include="Negocio\Idiomas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

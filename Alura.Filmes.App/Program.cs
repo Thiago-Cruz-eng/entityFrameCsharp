@@ -11,22 +11,23 @@ namespace Alura.Filmes.App
     {
         static void Main(string[] args)
         {
-            //teste basico (select em atores)
             using (var context = new AluraFilmesContexto())
             {
                 context.LogSQLToConsole();
 
-                var filme = context.Filmes
-                    .Include(f => f.Atores)
-                    .ThenInclude(fa => fa.Ator)
-                    .First();
+                var idiomas = context.Idiomas
+                    .Include(i => i.FilmesFalados);
 
-                Console.WriteLine(filme);
-                Console.WriteLine("Elenco: ");
-
-                foreach (var ator in filme.Atores)
+                foreach (var lang in idiomas)
                 {
-                    Console.WriteLine(ator.Ator);
+                    Console.WriteLine(lang);
+
+                    foreach (var film in lang.FilmesFalados)
+                    {
+                        Console.WriteLine(film);
+                    }
+
+                    Console.WriteLine("");
                 }
             }
 
