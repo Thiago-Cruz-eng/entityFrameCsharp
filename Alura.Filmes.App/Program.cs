@@ -15,38 +15,19 @@ namespace Alura.Filmes.App
             using (var context = new AluraFilmesContexto())
             {
                 context.LogSQLToConsole();
-          
 
-                var elenco = context.Elenco;
+                var filme = context.Filmes
+                    .Include(f => f.Atores)
+                    .ThenInclude(fa => fa.Ator)
+                    .First();
 
-                foreach (var e in elenco)
+                Console.WriteLine(filme);
+                Console.WriteLine("Elenco: ");
+
+                foreach (var ator in filme.Atores)
                 {
-                    var entity = context.Entry(e);
-                    var film = entity.Property("film_id").CurrentValue;
-                    var actor = entity.Property("actor_id").CurrentValue;
-                    var date = entity.Property("last_update").CurrentValue;
-                    Console.WriteLine($"film {film}, actor: {actor}, date: {date}");
+                    Console.WriteLine(ator.Ator);
                 }
-
-
-                /* 
-                 * ADD NEW ACTOR
-                   var ator = new Ator();
-                   ator.PrimeiroName = "Nardo";
-                   ator.UltimoName = "Cruz";
-
-                context.Atores.Add(ator);
-                context.SaveChanges();*/
-
-                /*//listar 10 ultimos updates no DB
-                  var atores = context.Atores
-                      .OrderByDescending(a => EF.Property<DateTime>(a, "last_update"))
-                      .Take(10);
-                  //LISTAR
-                  foreach( var a in atores )
-                  {
-                      Console.WriteLine(a + "---" + context.Entry(a).Property("last_update").CurrentValue);
-                 }*/
             }
 
         }

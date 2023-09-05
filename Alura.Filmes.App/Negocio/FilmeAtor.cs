@@ -3,6 +3,7 @@ namespace Alura.Filmes.App.Negocio
 {
     public class FilmeAtor
     {
-        //public int Id { get; set; }
+        public Filme Filme { get; set; }
+        public Ator Ator { get; set; }
     }
 }
