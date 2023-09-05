@@ -130,6 +130,10 @@
     <Compile Include="Migrations\20230904203437_Initial.designer.cs">
       <DependentUpon>20230904203437_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20230905103717_Add_default_value_datetime_last_update.cs" />
+    <Compile Include="Migrations\20230905103717_Add_default_value_datetime_last_update.designer.cs">
+      <DependentUpon>20230905103717_Add_default_value_datetime_last_update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\AluraFilmesContextoModelSnapshot.cs" />
     <Compile Include="Negocio\Ator.cs" />
     <Compile Include="Program.cs" />

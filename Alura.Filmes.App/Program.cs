@@ -14,9 +14,9 @@ namespace Alura.Filmes.App
             {
                 context.LogSQLToConsole();
                 var ator = new Ator();
-                ator.PrimeiroName = "Thiago";
+                ator.PrimeiroName = "Nardo";
                 ator.UltimoName = "Cruz";
-                context.Entry(ator).Property("last_update").CurrentValue = DateTime.Now;
+                //context.Entry(ator).Property("last_update").CurrentValue = DateTime.Now;
 
                 context.Atores.Add(ator);
                 context.SaveChanges();

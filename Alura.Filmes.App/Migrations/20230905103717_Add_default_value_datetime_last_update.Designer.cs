@@ -11,9 +11,10 @@ using System;
 namespace Alura.Filmes.App.Migrations
 {
     [DbContext(typeof(AluraFilmesContexto))]
-    partial class AluraFilmesContextoModelSnapshot : ModelSnapshot
+    [Migration("20230905103717_Add_default_value_datetime_last_update")]
+    partial class Add_default_value_datetime_last_update
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
