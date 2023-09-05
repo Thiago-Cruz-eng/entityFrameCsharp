@@ -126,6 +126,7 @@
   <ItemGroup>
     <Compile Include="Dados\AluraFilmesContexto.cs" />
     <Compile Include="Dados\AtorConfig.cs" />
+    <Compile Include="Dados\FilmeAtorConfig.cs" />
     <Compile Include="Dados\FilmConfig.cs" />
     <Compile Include="Extensions\DbContextExtensions.cs" />
     <Compile Include="Migrations\20230904203437_Initial.cs" />
@@ -139,6 +140,7 @@
     <Compile Include="Migrations\AluraFilmesContextoModelSnapshot.cs" />
     <Compile Include="Negocio\Ator.cs" />
     <Compile Include="Negocio\Filme.cs" />
+    <Compile Include="Negocio\FilmeAtor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

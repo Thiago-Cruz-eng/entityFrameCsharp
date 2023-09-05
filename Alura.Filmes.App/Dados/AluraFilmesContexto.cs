@@ -10,6 +10,7 @@ namespace Alura.Filmes.App.Dados
         //3 passo amarrar a tabela que o entity vai gerenciar
         public DbSet<Ator> Atores { get; set; }
         public DbSet<Filme> Filmes { get; set; }
+        public DbSet<FilmeAtor> Elenco { get; set; }
 
         //2 passo vou overide onconfiguring
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -21,6 +22,7 @@ namespace Alura.Filmes.App.Dados
         {
             modelBuilder.ApplyConfiguration(new AtorConfig());
             modelBuilder.ApplyConfiguration(new FilmConfig());
+            modelBuilder.ApplyConfiguration(new FilmeAtorConfig());
         }
     }
 }

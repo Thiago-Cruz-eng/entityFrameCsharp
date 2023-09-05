@@ -17,11 +17,15 @@ namespace Alura.Filmes.App
                 context.LogSQLToConsole();
           
 
-                var filmes = context.Filmes;
+                var elenco = context.Elenco;
 
-                foreach (var film in filmes)
+                foreach (var e in elenco)
                 {
-                    Console.WriteLine(film);
+                    var entity = context.Entry(e);
+                    var film = entity.Property("film_id").CurrentValue;
+                    var actor = entity.Property("actor_id").CurrentValue;
+                    var date = entity.Property("last_update").CurrentValue;
+                    Console.WriteLine($"film {film}, actor: {actor}, date: {date}");
                 }
 
 
